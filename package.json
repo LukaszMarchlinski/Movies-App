@@ -1,11 +1,12 @@
 {
   "name": "Movies-App",
   "version": "1.1.0",
+  "private": true,
   "description": "",
   "homepage": "https://LukaszMarchlinski.github.io/Movies-App",
   "scripts": {
-    "dev": "parcel src/*.html",
-    "build": "parcel build src/*.html --public-url /Movies-App/"
+    "dev": "",
+    "build": ""
   },
   "keywords": [],
   "author": "",
