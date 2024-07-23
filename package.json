@@ -1,18 +1,18 @@
 {
   "name": "Movies-App",
   "version": "1.1.0",
-  "private": true,
-  "description": "",
+  "private": false,  // Zmieniamy na false, jeśli projekt ma być publiczny
+  "description": "A personal project for movie management",
   "homepage": "https://LukaszMarchlinski.github.io/Movies-App",
   "scripts": {
     "dev": "parcel src/index.html",
     "build": "parcel build src/index.html --public-url /"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": ["movies", "app"],
+  "author": "Lukasz Marchlinski <your-email@example.com>",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/migace/parcel-project-template-pl-main/issues"
+    "url": "https://github.com/LukaszMarchlinski/Movies-App/issues"
   },
   "devDependencies": {
     "@parcel/transformer-sass": "^2.8.3",
