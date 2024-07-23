@@ -25,7 +25,7 @@
 
 .movie-modal {
   background: $background-color-tertiary;
-  width: 280px;
+  width: 320px;
   height: auto;
   padding: 48px 20px;
   position: absolute;
@@ -40,6 +40,7 @@
 
   @media screen and (min-width: $tablet) {
     width: 700px;
+    height: auto;
     background-color: white;
     box-shadow: 0 0 100px 80px rgba(207, 130, 7, 0.192);
     
@@ -48,8 +49,8 @@
     padding-bottom: 20px;
     top: 50%;
         transform: translate(-50%, -50%);
-        overflow-x: none;
-    max-height: none;
+        max-height: 80vh;
+    z-index: 1000;
 
       
   }
@@ -64,6 +65,8 @@
     padding-bottom: 20px;
     top: 50%;
         transform: translate(-50%, -50%);  
+        max-height: none;
+    z-index: none;
   }
 
   &__container {
