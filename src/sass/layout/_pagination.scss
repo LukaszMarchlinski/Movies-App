@@ -1,0 +1,62 @@
+.pagination-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.tui-pagination {
+  display: flex;
+  gap: 10px;
+  font-size: 15px;
+}
+
+.tui-page-btn {
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  transition: box-shadow 250ms linear, transform 250ms linear;
+
+  svg {
+    width: 20px;
+    height: 20px;
+    fill: black; /* Domyślny kolor dla jasnego tła */
+  }
+
+  &:hover {
+    box-shadow: 0 0 5px 5px rgba(255, 107, 1, 0.63);
+    svg {
+      transform: scale(1.1);
+      fill: #ff6b08;
+    }
+  }
+}
+
+.tui-is-selected {
+  background-color: #ff6b08;
+  box-shadow: 0 0 5px 5px rgba(255, 107, 1, 0.63);
+
+  svg {
+    fill: #fff; /* Kolor ikon gdy przycisk jest wybrany */
+  }
+}
+
+/* Media query dla trybu ciemnego */
+@media (prefers-color-scheme: dark) {
+  .tui-page-btn svg {
+    fill: #fff; /* Kolor ikon w trybie ciemnym */
+  }
+
+  .tui-page-btn:hover svg {
+    fill: #ff6b08; /* Kolor ikon w trybie ciemnym na hover */
+  }
+
+  .tui-is-selected svg {
+    fill: #fff; /* Kolor ikon gdy przycisk jest wybrany w trybie ciemnym */
+  }
+}

@@ -1,0 +1,126 @@
+// do usunięcia po zaczytaniu resetu stylów
+.movie-data > p {
+  margin: 0px;
+}
+// ------------------------
+
+.movie-collection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding-top: 20px;
+
+  @media screen and (min-width: 768px) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 32px;
+    padding-top: 59px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    gap: 18px;
+    padding-top: 44px;
+  }
+}
+.movie-card {
+  width: 280px;
+  height: 440px;
+
+  @media screen and (min-width: 768px) {
+    width: 336px;
+    height: 495px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    width: 290px;
+    height: 520px;
+    margin-top: 16px;
+  }
+
+  &__img {
+    width: 100%;
+    height: 398px;
+    border-radius: 5px;
+    display: block;
+    transition: all 0.1s ease-in;
+    background-image: url(/src/images/imageonline-co-placeholder-image.jpg);
+    background-size: contain;
+
+    @media screen and (min-width: 768px) {
+      height: 455px;
+    }
+
+    @media screen and (min-width: 1280px) {
+      height: 420px;
+    }
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  &:hover img {
+    opacity: 90%;
+    transform: scale(1.05);
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+  }
+}
+
+.movie-data {
+  width: 100%;
+  height: 46px;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  padding-top: 10px;
+
+  @media screen and (min-width: 1280px) {
+    height: 60px;
+    padding-top: 12px;
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  .__title {
+    color: black;
+    text-transform: uppercase;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  
+  /* Styl dla trybu ciemnego, który jest aktywowany przez klasę */
+  .dark-mode .__title {
+    color: white;
+  
+  }
+  &__info {
+    color: $font-color-accent;
+  }
+
+  &__vote {
+    display: inline-block;
+    width: 36px;
+    height: 16px;
+    background: #ff6b01;
+    border-radius: 5px;
+    color: white;
+    text-align: center;
+    font-size: 10px;
+    line-height: 17px;
+
+    @media screen and (min-width: $desktop) {
+      width: 40px;
+      height: 20px;
+      font-size: 12px;
+      line-height: 23px;
+    }
+
+    &--is-hidden {
+      display: none;
+    }
+  }
+}
