@@ -5,8 +5,8 @@
   "description": "",
   "homepage": "https://LukaszMarchlinski.github.io/Movies-App",
   "scripts": {
-    "dev": "",
-    "build": ""
+    "dev": "parcel src/index.html",
+    "build": "parcel build src/index.html --public-url /"
   },
   "keywords": [],
   "author": "",
