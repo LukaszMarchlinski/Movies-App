@@ -13,8 +13,8 @@
   }
   &-page-btn {
     border-radius: 5px;
-    width: 25px;
-    height: 25px;
+    width: 30px;
+    height: 30px;
     border: none;
     display: flex;
     justify-content: center;
@@ -39,27 +39,27 @@
     background-image: url(/src/images/left.svg);
     background-repeat: no-repeat;
     background-position: center;
-    background-size: 15px;
+    background-size: 18px;
   }
   &-next {
     background-image: url(/src/images/right.svg);
     background-repeat: no-repeat;
     background-position: center;
-    background-size: 15px;
+    background-size: 18px;
   }
   &-last {
     display: flex;
     background-image: url(/src/images/right-end.svg);
     background-repeat: no-repeat;
     background-position: center;
-    background-size: 15px;
+    background-size: 18px;
   }
   &-first {
     display: flex;
     background-image: url(/src/images/left-end.svg);
     background-repeat: no-repeat;
     background-position: center;
-    background-size: 15px;
+    background-size: 18px;
   }
   &-is-selected {
     background-color: #ff6b08;
