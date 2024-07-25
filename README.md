@@ -1,48 +1,46 @@
-# parcel-project-template
+# Movies-App
 
-## Zalezności
+## Project Description
 
-Na komputerze musi być zainstalowana LTS-wersja [Node.js](https://nodejs.org/en/).
+Movies-App is a group project that underwent significant changes after its completion. I completely
+overhauled the project, fixing bugs and improving the styling. The application is responsive and
+optimized for different screen sizes, including desktop (1280p), tablet (768p), and mobile devices
+(450p).
 
-## Przed rozpoczęciem pracy
+## Features
 
-Jeden raz na projekt zainstalować wszystkie zalezności.
+- **Main Page (Header)**: Contains basic information and navigation.
+- **My Library Page**: Displays movies added to the bookmarks.
+- **Modal Window**: Shows movie details, its cover, and two buttons:
+  - **Add to Watches Bookmark**: Adds the movie to the "watches" bookmark.
+  - **Add to Queue Bookmark**: Adds the movie to the "queue" bookmark.
+- Movies added to bookmarks are visible on the "My Library" page.
 
-```shell
+## Technologies
+
+- Parcel - A fast bundler for web applications.
+- Sass - A CSS preprocessor.
+- Axios - A library for making HTTP requests.
+- Siema - A lightweight library for creating carousels.
+- TUI Pagination - A library for pagination
+
+## Installation
+
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/LukaszMarchlinski/Movies-App.git
+
+   ```
+
+2. Install dependencies:
+
+````bash
 npm ci
-```
 
-### Praca
-
-Włączyć tryp pracy.
-
-```shell
+3. Run the application in development mode:
+```bash
 npm run dev
-```
+web- http://localhost:1234
 
-W przeglądarce przejść na [http://localhost:1234](http://localhost:1234).
-
-### Deploy
-
-Kod będzie automatycznie się zbierać i robić deploy aktualnej wersji projektu 
-na GitHub Pages, w gałąź `gh-pages`, za kazdym razem jeśli zostaną wprowadzone zmiany w `main`. Na przykład, po bezpośrenim push lub po przyjęciu pull-request. Aby to działało musimy w pliku `package.json` zmienić pole `homepage` i skrypt
-`build`, zmieniając `nazwe_uzytkownika` i `nazwe_repozytorium` na swoje.
-
-```json
-"homepage": "https://nazwa_uzytkownika.github.io/nazwa_repozytorium",
-"scripts": {
-  "build": "parcel build src/*.html --public-url /nazwa_repozytorium/"
-},
-```
-
-Po jakimś czasie stronę mozna będzie zobaczyć na zywo pod adresem który 
-jest wpisany w poprawione właściwości `homepage`, na przykład
-[https://goitacademy.github.io/parcel-project-template](https://goitacademy.github.io/parcel-project-template).
-
-## Pliki i folderzy
-
-- Wszystkie partials plików styłów powinny być w folderze `src/sass` i importować się w
-  `src/sass/main.scss`
-- Zdjęcia dodawajcie w folder `src/images`, przed tym zoptymizujcie te zdjęcia które dodajecie. Program po prostu 
-  kopiuje wykorzystane zdjęcia aby system nie musiał optymizować je, bo na słabych komputerach 
-  to moze zająć duzo czasu.
+````
