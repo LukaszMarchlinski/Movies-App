@@ -94,7 +94,7 @@
     }
 }
 
-.button2__modal {
+.button__modal {
     display: flex;
     justify-content: space-between;
     padding: 0 20px;
@@ -103,7 +103,7 @@
 }
 
 
-.modal__close2 {
+.modal__close {
     position: absolute;
     top:12px;
     right: 12px;
@@ -226,16 +226,8 @@
     stroke:inherit;
 }
 
-.modal__close2-icon {
-    width: 10px;
-    height: 10px;
-    stroke: #000000;
-    fill: #000000;
-    @media (min-width: 450px)  {
-    width: 16px;
-    height: 16px;
-    }
-}
+
+
 body {
     font-family: 'Roboto', sans-serif;
     color: #000000;

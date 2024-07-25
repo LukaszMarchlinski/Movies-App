@@ -1,44 +1,46 @@
-<header class="header-library">
-  <section>
-    <div class="header-library__content container">
-      <div class="header-library__logo">
-        <a class="header-library__logo-link" href="./index.html">
-          <div class="header-logoWrapper">
-            <img src="/src/images/HeaderLogo.png" alt="Logo" width="420" height="auto">
-        </div>
+<header class="headerlibrary">
+  <nav class="headerlibrary-nav container">
+      <div class="headerlibrary-logoWrapper">
+        <a href="index.html" class="headerlibrary-logoLink">
+          <img src="/src/images/HeaderLogo.png" alt="Logo">
         </a>
       </div>
-      <div class="header-box-list">
-        <ul class="header-list">
-          <li class="header-item">
+    <div class="headerlibrary-box-list">
+      <div class="headerlibrary-lists-container">
+        <ul class="headerlibrary-list">
+          <li class="headerlibrary-item">
             <a href="/src/index.html">Home</a>
           </li>
         </ul>
-          <ul class="header-list-2">
-          <li class="header-item-isActive">
+        <ul class="headerlibrary-list-2">
+          <li class="headerlibrary-item headerlibrary-item-isActive">
             <a href="/src/library.html">My library</a>
           </li>
         </ul>
       </div>
+      <div class="headerlibrary-logobirds">
+        <img class="headerlibrary-pigs" src="/src/images/pig.png" alt="motive">
+      </div>
     </div>
-    <button class="header-darkmode-btn" type="button"></button>
-    <div class="header-library__button-section">
-      <ul class="header-library__button-list">
-        <li>
-          <button
-            class="header-library__button-list-item button-active"
-            type="button"
-            id="watched-btn"
-          >
-            WATCHED
-          </button>
-        </li>
-        <li>
-          <button class="header-library__button-list-item" type="button" id="queue-btn">
-            QUEUE
-          </button>
-        </li>
-      </ul>
-    </div>
-  </section>
+  </nav>
+  <button class="header-darkmode-btn" type="button"></button>
+  <div class="headerlibrary-button-section">
+    <ul class="headerlibrary-button-list">
+      <li>
+        <button
+          class="headerlibrary-button-list-item button-active"
+          type="button"
+          id="watched-btn"
+        >
+          WATCHED
+        </button>
+      </li>
+      <li>
+        <button class="headerlibrary-button-list-item" type="button" id="queue-btn">
+          QUEUE
+        </button>
+      </li>
+    </ul>
+  </div>
 </header>
+<section class="movie-collection container"></section>

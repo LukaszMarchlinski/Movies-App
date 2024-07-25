@@ -6,6 +6,10 @@ function toggleDarkMode() {
   // Zapisz stan w localStorage
   const isDarkMode = document.body.classList.contains('dark');
   localStorage.setItem('darkMode', isDarkMode);
+  
+  // Emituj zdarzenie informujące o zmianie trybu ciemnego
+  const event = new Event('classChange');
+  document.body.dispatchEvent(event);
 }
 
 // Sprawdź, czy tryb ciemny był wcześniej włączony

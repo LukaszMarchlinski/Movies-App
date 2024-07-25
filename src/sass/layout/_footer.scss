@@ -1,6 +1,7 @@
 .footer {
-  background-color: $background-color-secondary;
-  color: $font-color-tertiary;
+  background: rgb(182,50,50);
+  background: linear-gradient(90deg, rgba(182,50,50,1) 0%, rgba(0,0,0,1) 87%);
+  color: white;
   text-align: center;
   width: 100%;
   font-size: 14px;
@@ -45,7 +46,7 @@
   &__info--students {
     margin-left: 5px;
     text-decoration: underline;
-    color: $font-color-tertiary;
+   
   }
 
   &__svg {
@@ -56,4 +57,28 @@
     fill: $accent-color;
     align-self: center;
   }
+}
+@keyframes pulse {
+  0% {
+    color: #ff6b01;
+  }
+  25% {
+    color: #ff8c00; /* Jaśniejszy odcień pomarańczowego */
+  }
+  50% {
+    color: white; /* Jeszcze jaśniejszy odcień pomarańczowego */
+  }
+  75% {
+    color: #ff8c00; /* Powracamy do poprzedniego jaśniejszego odcienia */
+  }
+  100% {
+    color: #ff6b01;
+  }
+}
+.footer-text__command {
+  animation: pulse 5s infinite;
+  cursor: pointer;
+  &:hover {
+    color: #ff6b01;
+    }
 }

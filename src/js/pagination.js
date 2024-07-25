@@ -14,39 +14,28 @@ export const renderPagination = ({ page, total_pages }) => {
     template: {
       page: '<a href="#" class="pagination tui-page-btn">{{page}}</a>',
       currentPage: '<strong class="pagination tui-page-btn tui-is-selected">{{page}}</strong>',
-      moveButton: function ({ type }) {
-        let icon;
-        if (type === 'prev') {
-          icon = '<svg class="icon"><use href="#icon-arrow-left2"></use></svg>';
-        } else if (type === 'next') {
-          icon = '<svg class="icon"><use href="#icon-arrow-right2"></use></svg>';
-        } else if (type === 'first') {
-          icon = '<svg class="icon"><use href="#icon-left-end"></use></svg>';
-        } else if (type === 'last') {
-          icon = '<svg class="icon"><use href="#icon-right-end"></use></svg>';
-        }
-        return `<a href="#" class="pagination tui-page-btn tui-${type}">${icon}</a>`;
-      },
-      disabledMoveButton: '<span class="tui-page-btn tui-is-disabled tui-{{type}}">' +
+      moveButton:
+        '<a href="#" class="pagination tui-page-btn tui-{{type}}">' +
+        '<span class="tui-ico-{{type}}"></span>' +
+        '</a>',
+      disabledMoveButton:
+        '<span class="tui-page-btn tui-is-disabled tui-{{type}}">' +
         '<span class="tui-ico-{{type}}"></span>' +
         '</span>',
-      moreButton: '<a href="#" class="tui-page-btn tui-{{type}}-is-ellip">' +
+      moreButton:
+        '<a href="#" class="tui-page-btn tui-{{type}}-is-ellip">' +
         '<span class="tui-ico-ellip">...</span>' +
         '</a>',
     },
   };
 
-  const pagination = new Pagination(document.getElementById('pagination'), options);
-  console.log('Pagination instance created:', pagination);
-
+  const pagination = new Pagination('pagination', options);
   pagination.on('beforeMove', async function (eventData) {
-    const { page } = eventData;
-    try {
-      const data = await API.getTrending(page);
-      renderMovieCollection(data.results);
-    } catch (error) {
-      console.error(error.message);
-    }
+    API.getTrending(eventData.page)
+      .then(data => {
+        renderMovieCollection(data.results);
+      })
+      .catch(error => console.error(error.message));
 
     window.scrollTo({
       top: 0,
