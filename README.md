@@ -67,7 +67,7 @@ web- http://localhost:1234
 
 ![modal Page](./src/images/Readme/modal.png),
 
-- sark mode ![modal Page](./src/images/Readme/modaldark.png),
+- dark mode ![modal Page](./src/images/Readme/modaldark.png),
 
 4. Scroll up
 
